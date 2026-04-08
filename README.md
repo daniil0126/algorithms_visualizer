@@ -1,1 +1,3 @@
 # algorithms_visualisator
+
+NIGGAKILLERS
