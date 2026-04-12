@@ -7,13 +7,13 @@ class App:
     def __init__(self):
         self.root = tk.Tk()
         #меню кароче
+        self.main_window = MainWindow(self.root)
+        #а тууут главное окно, там уже все вместе хехеехехехх
         self.algo_selection=AlgorithmSelection(self.root)
         #контролер кароче
         self.controller = Controller(self.root)
         #а тут они кароче дружатся
         self.controller.algo_selection = self.algo_selection
-        #а тууут главное окно, там уже все вместе хехеехехехх
-        self.main_window = MainWindow(self.root, self.algo_selection, self.controller)
         
     
     def run(self):

@@ -1,7 +1,7 @@
 import tkinter as tk
 
 class MainWindow:
-    def __init__(self, root, controller, algo_selection):
+    def __init__(self, root):
         self.root = root
 
         self.root.title("Algorithms Visualizer")
