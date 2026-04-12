@@ -25,7 +25,7 @@ class View:
                 text=str(value), 
                 foreground="white", 
                 bg=color,
-                font=("Arial", 12), 
+                font=("Arial", 12),  
                 width=6, 
                 height=3, 
                 borderwidth=1, 

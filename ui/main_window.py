@@ -3,8 +3,6 @@ import tkinter as tk
 class MainWindow:
     def __init__(self, root, controller, algo_selection):
         self.root = root
-        self.algo_selection = algo_selection
-        self.controller = controller
 
         self.root.title("Algorithms Visualizer")
         self.root.geometry("800x600")

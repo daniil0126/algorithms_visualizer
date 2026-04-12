@@ -1,6 +1,6 @@
 from tkinter import Button, Frame
 from ui.view import View
-from alkoritms.sorting.bubbleSort import BubbleSort
+from config import AVAILABLE_ALGORITHMS
 
 class Controller:
     def __init__(self, root):
@@ -44,8 +44,19 @@ class Controller:
 
     def start(self):
         self.is_running = True
+
+        selected_algo = self.algo_selection.combobox.get()
+        #это вс код подсказал но я понял че эт.
+        if selected_algo not in AVAILABLE_ALGORITHMS:
+            print("Please select a valid algorithm")
+            return
+        
         arr = [5, 2, 9, 1, 5, 6]
-        gen = BubbleSort.sort(arr)
+        #это достаем функцию сортировки из конфига по имени алгоритма, который выбрал пользователь
+        algo_func = AVAILABLE_ALGORITHMS[selected_algo]
+        #это запускаем генератор сортировки, который будет выдавать состояние массива на каждом шаге
+        #прикинь мне вс код даже коментарии подсказал. АХАХААХАХ
+        gen = algo_func(arr)
         if self.is_running:
             self.animate(gen)
         print("Visualization started")
